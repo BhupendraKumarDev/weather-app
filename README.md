@@ -1,79 +1,83 @@
 # 🌤️ SkyCast — Modern Weather Dashboard
 
-[![React](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-4.5-646CFF?style=flat-square&logo=vite)](https://vitejs.dev/)
-[![Material UI](https://img.shields.io/badge/Material--UI-6.0-007FFF?style=flat-square&logo=mui)](https://mui.com/)
+> **Note on Engineering Background:** This project represents frontend engineering practice utilizing **React 19**, **Vite**, and **Material UI**. My current primary career focus is **Java Full Stack Development (Java, Spring Boot, React, MySQL)**.
+
+[![React](https://img.shields.io/badge/React-19.2-20232A?style=flat-square&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-4.5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Material UI](https://img.shields.io/badge/Material--UI-v6-007FFF?style=flat-square&logo=mui&logoColor=white)](https://mui.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-SkyCast is an elegant, responsive, and feature-rich weather dashboard built with **React**, **Vite**, and **Material UI**. It connects to the **OpenWeatherMap API** to fetch real-time weather information and presents it in a premium glassmorphic UI. 
+**SkyCast** is an elegant, responsive weather dashboard built with **React**, **Vite**, and **Material UI**. It connects to the **OpenWeatherMap API** to fetch real-time weather metrics and presents them in a modern glassmorphic interface.
 
-### 🔗 **[Live Demo on Vercel](https://weather-app-two-psi-80.vercel.app/)**
+🔗 **Live Deployment:** [https://weather-app-two-psi-80.vercel.app/](https://weather-app-two-psi-80.vercel.app/)
 
 ---
 
 ## ✨ Features
 
-* **🎨 Theme Mode Toggle**: Instantly switch between custom-designed **Light** and **Dark** themes.
-* **🌡️ Dynamic Weather Backgrounds**: The background gradient changes dynamically depending on the active weather condition and temperature (Warm gold for hot climates, frosty ice-blue for cold, and slate-grey for rain!).
-* **📊 Comprehensive Weather Stats Grid**: View real-time temperature, min/max values, "feels like" temperature, atmospheric pressure, wind speed, and humidity in a clean responsive grid.
-* **🔍 Integrated Search Bar**: A smooth, inline search input adorned with search icons. It formats input strings into proper city names (e.g., searching `"london"` correctly renders as `"London, GB"`).
-* **⚠️ Error & Fallback Control**: Displays graceful, slide-down banners if the API key is unconfigured or a city is not found.
+* **Theme Mode Toggle:** Switch seamlessly between light and dark visual themes.
+* **Dynamic Weather Backgrounds:** Visual gradient adapts based on weather conditions and ambient temperature.
+* **Comprehensive Metrics Grid:** Real-time temperature, min/max values, feels-like indicator, atmospheric pressure, wind speed, and humidity.
+* **Integrated Search:** Inline search input formatted to handle geographic city names.
+* **Graceful Error Handling:** Fallback banners for network latency, missing API keys, or invalid location searches.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-* **Frontend**: React 19, Vite, Javascript (ES6+)
-* **Styling & UI**: Material UI (MUI v6), `@mui/icons-material` for crisp modern vectors
-* **API**: [OpenWeatherMap API v2.5](https://openweathermap.org/api)
-* **Hosting**: Vercel
+- **Framework:** React 19 (`react`, `react-dom`)
+- **UI Components:** Material-UI (`@mui/material`, `@mui/icons-material`, `@emotion/react`, `@emotion/styled`)
+- **Build Tool:** Vite 4.5
+- **API:** OpenWeatherMap Current Weather Data REST API
+- **Deployment:** Vercel
 
 ---
 
-## ⚙️ Local Setup and Installation
+## 📂 Project Structure
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/Bhupendra-Kumar-1/weather-app.git
-cd weather-app
-```
-
-### 2. Install dependencies
-```bash
-npm install
-```
-
-### 3. Setup Environment Variables
-Create a file named `.env` in the root directory of your project and insert your OpenWeatherMap API Key:
-```env
-VITE_WEATHER_API_KEY=your_openweathermap_api_key_here
-```
-> *Note: You can get your free API key by signing up at [OpenWeatherMap](https://home.openweathermap.org/users/sign_up).*
-
-### 4. Run the Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
-
-### 5. Build for Production
-```bash
-npm run build
+```text
+weather-app/
+├── public/              # Static assets and icons
+├── src/
+│   ├── assets/          # Weather condition icons
+│   ├── components/      # UI widgets (SearchBar, InfoBox, WeatherApp)
+│   ├── App.jsx          # Root component
+│   ├── index.css        # Global CSS resets
+│   └── main.jsx         # App mounting point
+├── index.html           # HTML template
+├── package.json         # Dependencies
+└── vite.config.js       # Vite configuration
 ```
 
 ---
 
-## 🚀 Deploying to Vercel
+## ⚙️ Installation & Setup
 
-Since you are deployed on Vercel, make sure you configure your environment variables in the Vercel Dashboard:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Bhupendra-Kumar-1/weather-app.git
+   cd weather-app
+   ```
 
-1. Navigate to your project on **Vercel** ➡️ **Settings** ➡️ **Environment Variables**.
-2. Add a new variable:
-   * **Key**: `VITE_WEATHER_API_KEY`
-   * **Value**: *Your OpenWeatherMap API key*
-3. Click **Save** and trigger a **Redeploy** on your latest deployment.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_WEATHER_API_KEY=your_openweathermap_api_key
+   ```
+
+4. **Run the local development server:**
+   ```bash
+   npm run dev
+   ```
 
 ---
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 👨‍💻 Author
+**Bhupendra Kumar**  
+- GitHub: [@Bhupendra-Kumar-1](https://github.com/Bhupendra-Kumar-1)  
+- LinkedIn: [linkedin.com/in/bhupendra-kumar-dev](https://www.linkedin.com/in/bhupendra-kumar-dev/)
